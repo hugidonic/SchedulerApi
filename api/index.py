@@ -36,17 +36,17 @@ async def get_schedule_for_date(date: str):
 
     day_of_week_name = week_day_names[num_of_week]
 
-    return get_json(chet, day_of_week_name)
+    return get_json("chet", day_of_week_name)
 
 
 @app.get("/subjects/{type_of_week}/{day_of_week}")
 async def get_schedule_for_day_of_week(type_of_week: str, day_of_week: str):
     if day_of_week not in week_day_names or type_of_week not in types_of_week:
-        raise HTTPException(status_code=404, detail="Bad data for day of week")
+        raise HTTPException(status_code=404, detail="Bad data")
 
     return get_json(type_of_week, day_of_week)
 
 
 def get_json(type_of_week: str, day_of_week: str):
-    with open("./api/json/" + type_of_week + day_of_week + ".json", encoding="utf8") as f:
+    with open("./api/json/" + type_of_week + "/" + day_of_week + ".json", encoding="utf8") as f:
         return json.load(f)
