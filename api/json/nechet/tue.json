@@ -1,22 +1,17 @@
 {
     "dayOfWeek": "Вт",
     "typeOfWeek": "Нечет",
-    "date": "2022-11-08",
+    "date": "08.11.2022",
     "subjects": [
-        null,
         {
             "title": "Элективные курсы по физической культуре и спорту. Элективные курсы проходят в спортивном комплексе \"МИРАС\"",
             "shortTitle": "Физра",
             "type": "Практика",
             "prepod": "",
             "cabinet": "",
-            "date": "1 сен - 1 янв"
-        },
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+            "duration": "1 сен - 1 янв",
+            "startTime": "9:40",
+            "endTime": "11:10"
+        }
     ]
 }
