@@ -1,0 +1,1 @@
+from .constants import week_day_names, types_of_week
