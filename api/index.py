@@ -1,5 +1,5 @@
 from fastapi import FastAPI, APIRouter
-
+from fastapi.staticfiles import StaticFiles
 from api.routes import get_schedule_for_date, get_week_schedule
 
 app = FastAPI()
@@ -16,7 +16,7 @@ router = APIRouter()
 """
 
 router.add_api_route(
-    path="/week_schedule/{chetnost}",
+    path="/week_schedule",
     endpoint=get_week_schedule
 )
 
@@ -27,3 +27,4 @@ router.add_api_route(
 
 
 app.router = router
+app.mount("/static", StaticFiles(directory="./static"), name='static')
