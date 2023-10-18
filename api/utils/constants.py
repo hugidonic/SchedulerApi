@@ -8,6 +8,6 @@ week_day_names = [
 ]
 
 types_of_week = [
-    "chet",
-    "nechet"
+    "Чет",
+    "Нечет"
 ]
