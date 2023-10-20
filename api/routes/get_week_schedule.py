@@ -8,7 +8,7 @@ async def get_week_schedule(group: str, type_of_week: str):
     with open("./api/json/groups.json", encoding="utf8") as f:
         groups = json.load(f)
         if (group not in groups):
-            raise HTTPException(status_code=400, detail={
+            raise HTTPException(status_code=404, detail={
                 "message": f"No such group, try another group. List of available groups: {groups}"
             })
 

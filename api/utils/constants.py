@@ -11,3 +11,8 @@ types_of_week = [
     "Чет",
     "Нечет"
 ]
+news_types = [
+    "grants",
+    "official_hronics",
+    "univer_life",
+]

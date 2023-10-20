@@ -1,6 +1,6 @@
 from fastapi import FastAPI, APIRouter
 from fastapi.staticfiles import StaticFiles
-from api.routes import get_schedule_for_date, get_week_schedule
+from api.routes import get_schedule_for_date, get_week_schedule, get_news
 
 app = FastAPI()
 router = APIRouter()
@@ -23,6 +23,11 @@ router.add_api_route(
 router.add_api_route(
     path="/schedule",
     endpoint=get_schedule_for_date,
+)
+
+router.add_api_route(
+    path="/news",
+    endpoint=get_news,
 )
 
 
